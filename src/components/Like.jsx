@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 class Like extends React.Component {
     render() {
@@ -12,6 +13,11 @@ class Like extends React.Component {
             </>
         )
     }
+}
+
+Like.propTypes = {
+    status: PropTypes.bool.isRequired,
+    onChange:PropTypes.func.isRequired,
 }
 
 export default Like

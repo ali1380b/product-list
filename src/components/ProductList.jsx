@@ -3,6 +3,7 @@ import * as productService from '../Product'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'font-awesome/css/font-awesome.min.css'
 import Like from "./Like";
+import TestLike from "./TestLike";
 
 class ProductList extends Component {
     state = {
@@ -10,7 +11,7 @@ class ProductList extends Component {
     }
     setLike = (id) => {
         const products = [...this.state.products];
-        const product = products.find(p => p.id == id)
+        const product = products.find(p => p.id === id)
         product.like = !product.like
         this.setState({products: products})
     }
@@ -37,7 +38,7 @@ class ProductList extends Component {
                                 <td>{p.menuFacture}</td>
                                 <td>{p.quantity}</td>
                                 <td>
-                                    <Like status={p.like} onChange={()=>this.setLike(p.id)}
+                                    <Like status={p.like} onChange={() => this.setLike(p.id)}
 
                                     />
                                 </td>
@@ -45,6 +46,7 @@ class ProductList extends Component {
                         ))}
                         </tbody>
                     </table>
+                    <TestLike/>
                 </div>
             </>
         )

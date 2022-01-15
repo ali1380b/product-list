@@ -1,7 +1,9 @@
 import React, {Component} from "react";
 import * as productService from '../Product'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'font-awesome/css/font-awesome.min.css'
+
 import Like from "./Like";
 import TestLike from "./TestLike";
 

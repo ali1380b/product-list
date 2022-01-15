@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import * as productService from '../Product'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'font-awesome/css/font-awesome.min.css'
+import Like from "./Like";
 
 class ProductList extends Component {
     state = {
@@ -36,11 +37,10 @@ class ProductList extends Component {
                                 <td>{p.menuFacture}</td>
                                 <td>{p.quantity}</td>
                                 <td>
-                                    <i  onClick={() => this.setLike(p.id)}
-                                       style={{cursor:'pointer'}}
-                                       className={p.like === true ? "fa fa-heart-o" : "fa fa-heart"}>
+                                    <Like status={p.like} onChange={()=>this.setLike(p.id)}
 
-                                    </i></td>
+                                    />
+                                </td>
                             </tr>
                         ))}
                         </tbody>

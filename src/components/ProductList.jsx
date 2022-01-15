@@ -5,6 +5,7 @@ import 'font-awesome/css/font-awesome.min.css'
 import Like from "./Like";
 import TestLike from "./TestLike";
 
+import './ProductList.css'
 class ProductList extends Component {
     state = {
         products: productService.getProducts()
@@ -39,7 +40,6 @@ class ProductList extends Component {
                                 <td>{p.quantity}</td>
                                 <td>
                                     <Like status={p.like} onChange={() => this.setLike(p.id)}
-
                                     />
                                 </td>
                             </tr>

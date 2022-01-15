@@ -6,7 +6,7 @@ class Like extends React.Component {
         return (
             <>
                 <i onClick={() => this.props.onChange()}
-                   style={{cursor: 'pointer'}}
+                   style={{cursor: 'pointer',color:'red'}}
                    className={this.props.status === true ? "fa fa-heart-o" : "fa fa-heart"}>
 
                 </i>
